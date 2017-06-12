@@ -7,7 +7,6 @@ var https = require("https");
 var proxy = require('http-proxy-middleware');
 const express = require("express");
 const webpackDevMiddleware = require("webpack-dev-middleware");
-const webpackHotMiddleware = require("webpack-hot-middleware");
 
 var onProxyRes = function (proxyRes, req, res) {
     const key = "www-authenticate";
@@ -35,8 +34,6 @@ app.use('/api', proxy(
         }
     }
 ));
-
-//app.use('/api/test', proxy({ target: "http://localhost:8080/api/" }));
 
 app.use(webpackDevMiddleware(compiler,
         {
