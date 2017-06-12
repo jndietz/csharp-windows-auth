@@ -7,7 +7,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 // DEVELOPMENT SPECIFIC CONFIGURATION
 module.exports = {
     output: {
-        filename: 'assets/[name].bundle.js',
+        filename: '[name].bundle.js',
         publicPath: '/',
         path: resolve(__dirname, '../dist'),
     },
