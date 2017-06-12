@@ -1,4 +1,6 @@
 ﻿using System.Collections.Generic;
+using System.DirectoryServices.AccountManagement;
+using System.Runtime.Remoting.Messaging;
 using System.Web.Http;
 
 namespace csharp_windows_auth.Controllers
@@ -9,7 +11,8 @@ namespace csharp_windows_auth.Controllers
         // GET api/values
         public IEnumerable<string> Get()
         {
-            return new[] {"value1", "value2"};
+            var userName = User.Identity.Name;
+            return new[] {userName, "value1", "value2"};
         }
 
         // GET api/values/5
