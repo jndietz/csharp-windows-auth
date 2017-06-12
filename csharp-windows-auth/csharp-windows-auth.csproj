@@ -169,7 +169,10 @@
   <ItemGroup>
     <Content Include="Content\dev\server.js" />
     <Content Include="Content\dev\webpack.config.js" />
+    <Content Include="Content\dist\app.bundle.js" />
+    <Content Include="Content\dist\index.html" />
     <Content Include="Content\index.js" />
+    <Content Include="Content\index.template.html" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="ApplicationInsights.config">
